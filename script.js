@@ -1,4 +1,4 @@
-let random_number = 5;
+let random_number;
 let limit = 0;
 
 function main(number){
