@@ -19,6 +19,7 @@ function main(number){
             roond++
             return;
         }
+        
     }else document.getElementById("result").innerHTML = `<h1 style="color: red;">Game Over<h1>`; return;
 }
 
