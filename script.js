@@ -21,7 +21,7 @@ function log(){
         return;
     }
     let values = document.getElementById("number-enter").value;
-    if(!values) {
+    if(!values || isNaN(values)) {
         document.getElementById("result").innerHTML = '<h1 style="color: red;">Plz Enter The Number<h1>';
         return;
     };
