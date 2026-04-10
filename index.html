@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number GEN</title>
     <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Tiny5&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="root"></div>
     <section>
         <h1>Number Gen</h1>
         <div>
-            <button id="button-gen" type="button"onclick="">Ganerat Number</button>
-            <input type="number" id="number-enter">
-            <button id="log-button" type="button" onclick="">log</button>
+            <button id="button-gen" type="button"onclick="gen()">Ganerat Number</button>
+            <input type="number" maxlength=3  id="number-enter">
+            <button id="button-log" type="button" onclick="log()">log</button>
         </div>
         <h2>Result:</h2>
         <div id="result"></div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>
