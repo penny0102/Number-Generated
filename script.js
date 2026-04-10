@@ -1,19 +1,26 @@
 let random_number;
-let limit = 0;
+let roond = 1;
 
 function main(number){
-    if(number > random_number){
-        document.getElementById("result").innerHTML = `<h1>The Number ${number} is Hard!<h1>`;
-        return;
-    }else if(number < random_number){
-        document.getElementById("result").innerHTML = `<h1>The Number ${number} is  Low!<h1>`;
-        return;
-    }else if(number == random_number){
-        document.getElementById("result").innerHTML = `<h1 style="color: green;">Well Done<h1>`;
-        return;
-    }
+    if(roond <= 20){
+        if(number > random_number){
+            document.getElementById("result").innerHTML = `<h1>The Number ${number} is Hard!<h1>`;
+            roond++
+            document.getElementById("add-rounds").textContent = roond;
+            return;
+        }else if(number < random_number){
+            document.getElementById("result").innerHTML = `<h1>The Number ${number} is  Low!<h1>`;
+            document.getElementById("add-rounds").textContent = roond;
+            roond++
+            return;
+        }else if(number == random_number){
+            document.getElementById("result").innerHTML = `<h1 style="color: green;">Well Done<h1>`;
+            document.getElementById("add-rounds").textContent = roond;
+            roond++
+            return;
+        }
+    }else document.getElementById("result").innerHTML = `<h1 style="color: red;">Game Over<h1>`; return;
 }
-
 
 function log(){
     if(!random_number){
@@ -29,6 +36,6 @@ function log(){
 }
 
 function gen(){
-    random_number = Math.floor(Math.random()*100);
+    random_number = Math.floor(Math.random()*101);
     document.getElementById("result").innerHTML = '<h1 style="color: green;">Number is Gan<h1>';
 }
